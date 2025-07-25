@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import Navbar from '@/app/components/navbar';
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -38,24 +38,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Sticky Navbar */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-blue-600">Cielo Stack</div>
-          <div className="hidden md:flex space-x-8">
-            <a href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-            <a href="/team" className="text-gray-700 hover:text-blue-600 transition-colors">Team</a>
-            <a href="/work" className="text-gray-700 hover:text-blue-600 transition-colors">Work</a>
-            <a href="/careers" className="text-gray-700 hover:text-blue-600 transition-colors">Careers</a>
-            <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
-            <a href="#why-us" className="text-gray-700 hover:text-blue-600 transition-colors">Why Us</a>
-            <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition-colors">Testimonials</a>
-          </div>
-          <a href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors inline-block">
-            Contact
-          </a>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className={`pt-20 pb-32 px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
