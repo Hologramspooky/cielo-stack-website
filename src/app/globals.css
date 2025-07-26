@@ -31,3 +31,41 @@ a:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+@keyframes drift-slow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes drift-medium {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes drift-fast {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.animate-drift-slow {
+  animation: drift-slow 120s linear infinite;
+}
+
+.animate-drift-medium {
+  animation: drift-medium 80s linear infinite;
+}
+
+.animate-drift-fast {
+  animation: drift-fast 60s linear infinite;
+}

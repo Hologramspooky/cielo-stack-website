@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/app/components/navbar';
+import Link from 'next/link'; 
 export default function Team() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -263,12 +264,12 @@ export default function Team() {
             We're always looking for exceptional talent to join our dream team and help shape the future of rapid product development.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-white text-sky-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-sky-50 transition-all transform hover:scale-105 shadow-lg">
+           <Link href="/careers" className="bg-white text-sky-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-sky-50 transition-all transform hover:scale-105 shadow-lg inline-block text-center">
               View Open Positions
-            </button>
-            <button className="bg-sky-800/50 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-sky-700/50 transition-all transform hover:scale-105">
+            </Link>
+            <Link href="/contact" className="bg-sky-800/50 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-sky-700/50 transition-all transform hover:scale-105 inline-block text-center">
               Send Us Your Resume
-            </button>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,7 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link'; 
 import Navbar from '@/app/components/navbar';
+import AnimatedCloudBackground from '@/app/components/animatedcloudbackground';
+
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -40,25 +43,28 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className={`pt-20 pb-32 px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6">
+      {/* Hero Section with Animated Cloud Background */}
+      <section className={`relative pt-20 pb-32 px-6 transition-all duration-1000 overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* Animated Cloud Background */}
+        <AnimatedCloudBackground />
+        
+        <div className="relative max-w-7xl mx-auto text-center z-10">
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
             Launch Your MVP in{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-blue-400">
               30 Days
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
             Cielo Stack partners with visionary founders to bring ideas to life—fast.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105">
+            <Link href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all transform hover:scale-105 inline-block text-center shadow-lg">
               Get Started
-            </button>
-            <button className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all transform hover:scale-105">
+            </Link>
+            <Link href="/work" className="bg-blue-600/80 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700/80 transition-all transform hover:scale-105 inline-block text-center shadow-lg">
               See Our Work
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -171,12 +177,12 @@ export default function Home() {
             Join the waitlist and be among the first to experience our 30-day MVP development process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+            <Link href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 inline-block text-center">
               Join Waitlist
-            </button>
-            <button className="bg-blue-800 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-900 transition-all transform hover:scale-105">
+            </Link>
+            <Link href="/contact" className="bg-blue-800 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-900 transition-all transform hover:scale-105 inline-block text-center">
               Schedule a Call
-            </button>
+            </Link>
           </div>
         </div>
       </section>

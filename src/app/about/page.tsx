@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/app/components/navbar';
+import Link from 'next/link'; 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -235,12 +236,12 @@ export default function About() {
             Ready to transform your idea into reality? Let's discuss how we can bring your vision to life in just 30 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-white text-sky-600 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-sky-50 transition-all transform hover:scale-105 shadow-lg">
+            <Link href="/contact" className="bg-white text-sky-600 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-sky-50 transition-all transform hover:scale-105 shadow-lg inline-block text-center">
               Contact Us
-            </button>
-            <button className="bg-sky-800/50 backdrop-blur-sm text-white border-2 border-white/30 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-sky-700/50 transition-all transform hover:scale-105">
+            </Link>
+            <Link href="/work" className="bg-sky-800/50 backdrop-blur-sm text-white border-2 border-white/30 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-sky-700/50 transition-all transform hover:scale-105 inline-block text-center">
               View Our Work
-            </button>
+            </Link>
           </div>
         </div>
       </section>
