@@ -12,10 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Oil & Gas Service Consultant | Links",
-  description: "Professional services and contact information for oil & gas industry consulting",
-};
+export const metadata = {
+  title: 'Cielo Stack - MVP in 30 Days',
+  description: 'Transform your idea into a market-ready product in just 30 days',
+}
 
 export default function RootLayout({
   children,
